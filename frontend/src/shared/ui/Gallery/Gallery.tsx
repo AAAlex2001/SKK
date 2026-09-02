@@ -13,6 +13,7 @@ export interface GalleryItem {
 }
 
 export interface GalleryProps {
+  id: string;
   title: string;
   items: GalleryItem[];
 }
@@ -31,7 +32,7 @@ function ArrowIcon() {
   );
 }
 
-export function Gallery({ title, items }: GalleryProps) {
+export function Gallery({ id, title, items }: GalleryProps) {
   const [current, setCurrent] = useState(2);
 
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
@@ -47,7 +48,7 @@ export function Gallery({ title, items }: GalleryProps) {
   });
 
   return (
-    <section className={styles.root}>
+    <section id={id} className={styles.root}>
       <div className={styles.inner}>
         <div className={styles.header}>
           <h2 className={styles.title}>{title}</h2>

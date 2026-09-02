@@ -97,7 +97,7 @@ export function BurgerMenu({ id, open, onClose }: BurgerMenuProps) {
           </ul>
         </nav>
 
-        <Button className={styles.action} onClick={onClose}>
+        <Button className={styles.action} href="#contacts" onClick={onClose}>
           Связаться с нами
         </Button>
       </div>

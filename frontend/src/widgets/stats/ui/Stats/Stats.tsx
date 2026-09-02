@@ -8,7 +8,7 @@ const GROUPS = [STATS.slice(0, 2), STATS.slice(2)];
 
 export function Stats() {
   return (
-    <section className={styles.root}>
+    <section id="advantages" className={styles.root}>
       <Image
         className={styles.pattern}
         src="/stats.webp"

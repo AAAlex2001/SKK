@@ -13,7 +13,7 @@ export function Activities() {
   const openActivity = openIndex === null ? null : ACTIVITIES[openIndex];
 
   return (
-    <section className={styles.root}>
+    <section id="activities" className={styles.root}>
       <div className={styles.inner}>
         <div className={styles.header}>
           <h2 className={styles.title}>Направления деятельности</h2>

@@ -3,5 +3,5 @@ import { Gallery } from "@/shared/ui";
 import { REVIEWS } from "../../model/reviews";
 
 export function Reviews() {
-  return <Gallery title="Отзывы" items={REVIEWS} />;
+  return <Gallery id="reviews" title="Отзывы" items={REVIEWS} />;
 }

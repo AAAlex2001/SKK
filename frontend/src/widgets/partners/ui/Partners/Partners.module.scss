@@ -1,0 +1,76 @@
+.root {
+  background: #fff url("/partners/background.webp") center / cover no-repeat;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 100px 20px;
+
+  @media (min-width: 768px) {
+    padding: 42.5px 50px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+    padding: 143px 50px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 640px;
+}
+
+.title {
+  color: #26577c;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.rule {
+  width: 150px;
+  height: 3px;
+  background: #ea5455;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  height: 140px;
+  padding: 20px;
+  margin-right: var(--gap);
+  border-radius: 20px;
+  transition: background-color 0.25s ease;
+
+  img {
+    display: block;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background: rgb(38 87 124 / 8%);
+    }
+  }
+}

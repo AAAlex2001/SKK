@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Footer } from "@/widgets/footer";
 import { Header } from "@/widgets/header";
 
 import { fontPrimary } from "./fonts";
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

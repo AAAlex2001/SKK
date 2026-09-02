@@ -14,6 +14,17 @@ html {
   color-scheme: light;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+section[id],
+footer[id] {
+  scroll-margin-top: 75px;
+}
+
 body {
   display: flex;
   flex-direction: column;

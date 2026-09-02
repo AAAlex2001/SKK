@@ -55,7 +55,9 @@ export function Header() {
           </nav>
 
           <div className={styles.actions}>
-            <Button className={styles.action}>Связаться с нами</Button>
+            <Button className={styles.action} href="#contacts">
+              Связаться с нами
+            </Button>
 
             {menuOpen ? null : (
               <button
