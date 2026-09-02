@@ -96,8 +96,8 @@ export function ActivityDetails({
         <div className={styles.panel}>
           <div className={styles.block}>
             <h4 className={styles.blockTitle}>Описание услуги</h4>
-            {direction.description.map((paragraph) => (
-              <p key={paragraph} className={styles.text}>
+            {direction.description.map((paragraph, paragraphIndex) => (
+              <p key={paragraphIndex} className={styles.text}>
                 {paragraph}
               </p>
             ))}
@@ -106,8 +106,8 @@ export function ActivityDetails({
           {direction.docs ? (
             <div className={styles.docs}>
               <h4 className={styles.blockTitle}>Разрешительные документы</h4>
-              {direction.docs.map((paragraph) => (
-                <p key={paragraph} className={styles.text}>
+              {direction.docs.map((paragraph, paragraphIndex) => (
+                <p key={paragraphIndex} className={styles.text}>
                   {paragraph}
                 </p>
               ))}
