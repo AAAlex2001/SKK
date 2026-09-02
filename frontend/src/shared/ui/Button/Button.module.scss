@@ -1,0 +1,33 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.primary {
+  background: #ea5455;
+  color: #fff;
+
+  @media (hover: hover) {
+    &:hover {
+      background: #ff1a1c;
+    }
+  }
+
+  &:active {
+    background: #bc0001;
+  }
+}

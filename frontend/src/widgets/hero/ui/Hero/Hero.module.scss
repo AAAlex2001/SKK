@@ -1,0 +1,186 @@
+.root {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  margin-top: -75px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.layerBack,
+.layerFront {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.layerBack {
+  animation: layerBackIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.layerFront {
+  z-index: 1;
+  animation: layerFrontIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.image {
+  object-fit: cover;
+  object-position: 37% center;
+}
+
+.inner {
+  --gutter: 20px;
+
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  margin-inline: auto;
+
+  @media (min-width: 768px) {
+    --gutter: 50px;
+
+    max-width: 768px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+  }
+}
+
+.texts {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 50%;
+  transform: translateY(calc(-50% - 90px));
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    gap: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1040px;
+    gap: 28px;
+  }
+}
+
+.kicker,
+.title {
+  animation: textIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.kicker {
+  animation-delay: 0.25s;
+  color: #ebe4d1;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.037em;
+  text-shadow: 0 4px 10px #000;
+
+  @media (min-width: 768px) {
+    font-size: 26px;
+    line-height: 26px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.title {
+  animation-delay: 0.4s;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -0.037em;
+
+  @media (min-width: 768px) {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 76px;
+    line-height: 76px;
+  }
+}
+
+.tagline {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 40px;
+  max-width: 650px;
+  animation: textIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 31px;
+  letter-spacing: -0.037em;
+  text-align: left;
+  text-shadow: 0 4px 10px #000;
+
+  @media (min-width: 768px) {
+    bottom: 56px;
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  @media (min-width: 1440px) {
+    bottom: 72px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@keyframes layerFrontIn {
+  from {
+    transform: translateY(7%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes layerBackIn {
+  from {
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes textIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .layerBack,
+  .layerFront,
+  .kicker,
+  .title,
+  .tagline {
+    animation: none;
+  }
+}
