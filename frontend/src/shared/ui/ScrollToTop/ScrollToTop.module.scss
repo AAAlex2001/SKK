@@ -1,0 +1,46 @@
+.root,
+.visible {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #26577c;
+  border-radius: 50%;
+  background: #fff;
+  color: #26577c;
+  box-shadow: 2px 3px 10px rgb(196 153 75 / 20%);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  svg {
+    transform: rotate(-90deg);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background: #26577c;
+      color: #fff;
+    }
+  }
+
+  @media (min-width: 768px) {
+    right: 50px;
+    bottom: 50px;
+  }
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
