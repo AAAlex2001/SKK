@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@qpokychuk/gilroy": "^1.0.2",
+    "keen-slider": "^6.8.6",
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8"

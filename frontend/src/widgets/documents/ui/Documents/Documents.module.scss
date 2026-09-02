@@ -1,0 +1,170 @@
+.root {
+  background: #ebe4d1;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 50px 20px;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    padding: 50px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+
+  @media (min-width: 768px) {
+    max-width: 700px;
+  }
+}
+
+.title {
+  color: #26577c;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 31px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.rule {
+  width: 150px;
+  height: 3px;
+  background: #ea5455;
+}
+
+.viewport {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: calc(100% + 100px);
+    margin-inline: -50px;
+  }
+}
+
+.track {
+  width: 100%;
+}
+
+.shade {
+  display: none;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    width: 100px;
+    background: linear-gradient(90deg, #ebe4d1, rgb(235 228 209 / 0%));
+    pointer-events: none;
+  }
+
+  @media (min-width: 1440px) {
+    width: 275px;
+  }
+}
+
+.shadeLeft {
+  left: 0;
+}
+
+.shadeRight {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.slide {
+  flex: none;
+  min-width: 300px;
+  max-width: 300px;
+  aspect-ratio: 300 / 424;
+  border-radius: 5px;
+
+  @media (min-width: 768px) {
+    min-width: 600px;
+    max-width: 600px;
+  }
+}
+
+.image {
+  object-fit: cover;
+}
+
+.dots {
+  display: flex;
+}
+
+.dot,
+.dotActive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgb(38 87 124 / 30%);
+  }
+}
+
+.dotActive::before {
+  background: #26577c;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #26577c;
+  border-radius: 50%;
+  background: #fff;
+  color: #26577c;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+
+  @media (hover: hover) {
+    &:hover {
+      background: #26577c;
+      color: #fff;
+    }
+  }
+}
+
+.buttonPrev svg {
+  transform: scaleX(-1);
+}
