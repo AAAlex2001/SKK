@@ -1,18 +1,22 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import styles from "./ActivityCard.module.scss";
 
 export interface ActivityCardProps {
   title: string;
   count: string;
-  href: string;
   image?: string;
+  onOpen: () => void;
 }
 
-export function ActivityCard({ title, count, href, image }: ActivityCardProps) {
+export function ActivityCard({
+  title,
+  count,
+  image,
+  onOpen,
+}: ActivityCardProps) {
   return (
-    <Link href={href} className={styles.root}>
+    <button type="button" className={styles.root} onClick={onOpen}>
       {image ? (
         <Image
           className={styles.media}
@@ -26,7 +30,7 @@ export function ActivityCard({ title, count, href, image }: ActivityCardProps) {
       <span className={styles.overlay} />
 
       <span className={styles.content}>
-        <h3 className={styles.title}>{title}</h3>
+        <span className={styles.title}>{title}</span>
 
         <span className={styles.link}>
           <span className={styles.linkText}>{count}</span>
@@ -50,6 +54,6 @@ export function ActivityCard({ title, count, href, image }: ActivityCardProps) {
           </svg>
         </span>
       </span>
-    </Link>
+    </button>
   );
 }

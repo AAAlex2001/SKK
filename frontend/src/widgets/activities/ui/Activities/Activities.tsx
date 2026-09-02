@@ -1,9 +1,17 @@
+"use client";
+
+import { useState } from "react";
+
 import { ACTIVITIES } from "../../model/activities";
 import { ActivityCard } from "../ActivityCard/ActivityCard";
+import { ActivityDetails } from "../ActivityDetails/ActivityDetails";
 
 import styles from "./Activities.module.scss";
 
 export function Activities() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const openActivity = openIndex === null ? null : ACTIVITIES[openIndex];
+
   return (
     <section className={styles.root}>
       <div className={styles.inner}>
@@ -16,13 +24,28 @@ export function Activities() {
           </p>
         </div>
 
-        <ul className={styles.list}>
-          {ACTIVITIES.map((activity) => (
-            <li key={activity.title} className={styles.item}>
-              <ActivityCard {...activity} />
-            </li>
-          ))}
-        </ul>
+        {openActivity && openIndex !== null ? (
+          <ActivityDetails
+            activity={openActivity}
+            index={openIndex}
+            onClose={() => setOpenIndex(null)}
+          />
+        ) : (
+          <ul className={styles.list}>
+            {ACTIVITIES.map((activity, index) => (
+              <li key={activity.title} className={styles.item}>
+                <ActivityCard
+                  title={activity.title}
+                  count={activity.count}
+                  image={activity.image}
+                  onOpen={() => {
+                    if (activity.directions.length > 0) setOpenIndex(index);
+                  }}
+                />
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </section>
   );
