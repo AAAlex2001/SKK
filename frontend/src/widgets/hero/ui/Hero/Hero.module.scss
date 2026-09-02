@@ -29,6 +29,10 @@
   object-position: 37% center;
 }
 
+.layerFront .image {
+  filter: drop-shadow(0 -6px 18px rgb(0 0 0 / 45%));
+}
+
 .inner {
   --gutter: 20px;
 
