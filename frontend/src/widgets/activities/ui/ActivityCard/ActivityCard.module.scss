@@ -11,11 +11,22 @@
   overflow: hidden;
   text-align: left;
   cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover .media {
+      transform: scale(1.06);
+    }
+
+    &:hover .arrow {
+      transform: translateX(6px);
+    }
+  }
 }
 
 .media {
   z-index: 0;
   object-fit: cover;
+  transition: transform 0.45s ease;
 }
 
 .overlay {
@@ -71,4 +82,5 @@
   flex: none;
   width: 24px;
   height: 24px;
+  transition: transform 0.3s ease;
 }

@@ -7,6 +7,8 @@ import { Reviews } from "@/widgets/reviews";
 import { Stats } from "@/widgets/stats";
 import { Universities } from "@/widgets/universities";
 
+import styles from "./page.module.scss";
+
 export default function Home() {
   return (
     <main>
@@ -16,8 +18,11 @@ export default function Home() {
       <Documents />
       <About />
       <Reviews />
-      <Partners />
-      <Universities />
+
+      <div className={styles.group}>
+        <Partners />
+        <Universities />
+      </div>
     </main>
   );
 }
