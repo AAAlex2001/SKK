@@ -15,12 +15,13 @@
 }
 
 .layerBack {
-  animation: layerBackIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  z-index: 0;
+  animation: layerBackIn 1.3s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .layerFront {
-  z-index: 1;
-  animation: layerFrontIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  z-index: 2;
+  animation: layerFrontIn 1.3s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .image {
@@ -33,7 +34,6 @@
 
   position: absolute;
   inset: 0;
-  z-index: 2;
   width: 100%;
   margin-inline: auto;
 
@@ -50,6 +50,7 @@
 
 .texts {
   position: absolute;
+  z-index: 1;
   left: var(--gutter);
   right: var(--gutter);
   top: 50%;
@@ -73,11 +74,11 @@
 
 .kicker,
 .title {
-  animation: textIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: textIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .kicker {
-  animation-delay: 0.25s;
+  animation-delay: 0.7s;
   color: #ebe4d1;
   font-size: 22px;
   font-weight: 600;
@@ -97,7 +98,7 @@
 }
 
 .title {
-  animation-delay: 0.4s;
+  animation-delay: 0.85s;
   color: #fff;
   font-size: 30px;
   font-weight: 600;
@@ -120,8 +121,9 @@
   left: var(--gutter);
   right: var(--gutter);
   bottom: 40px;
+  z-index: 3;
   max-width: 650px;
-  animation: textIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+  animation: taglineIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1s both;
   color: #fff;
   font-size: 24px;
   font-weight: 600;
@@ -145,25 +147,41 @@
 
 @keyframes layerFrontIn {
   from {
-    transform: translateY(7%);
+    transform: translateY(8%) scale(1.2);
   }
 
   to {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
 @keyframes layerBackIn {
   from {
-    transform: scale(1.05);
+    transform: translateY(-8%) scale(1.2);
   }
 
   to {
-    transform: scale(1);
+    transform: translateY(0) scale(1);
   }
 }
 
 @keyframes textIn {
+  from {
+    opacity: 0;
+    transform: translateY(220px);
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes taglineIn {
   from {
     opacity: 0;
     transform: translateY(24px);
