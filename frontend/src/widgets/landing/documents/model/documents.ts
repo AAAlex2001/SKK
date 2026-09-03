@@ -1,9 +1,6 @@
-export interface DocumentItem {
-  src: string;
-  alt: string;
-}
+import type { GalleryItem } from "@/shared/ui";
 
-export const DOCUMENTS: DocumentItem[] = [
+export const DOCUMENTS: GalleryItem[] = [
   { src: "/documents/2.jpg", alt: "Разрешительный документ 1" },
   { src: "/documents/1.jpg", alt: "Разрешительный документ 2" },
   { src: "/documents/3.jpg", alt: "Разрешительный документ 3" },

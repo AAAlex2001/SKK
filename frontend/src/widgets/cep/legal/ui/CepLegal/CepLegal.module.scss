@@ -1,0 +1,157 @@
+.root {
+  background: #fff;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 50px 20px;
+  border-radius: 50px;
+  background: #ebe4d1;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    padding: 50px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.title {
+  color: #26577c;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  text-transform: uppercase;
+}
+
+.rule {
+  flex: none;
+  width: 150px;
+  height: 3px;
+  background: #ea5455;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+  list-style: none;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.item {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background: #fff;
+
+  @media (min-width: 1440px) {
+    padding: 24px;
+  }
+}
+
+.kind {
+  color: rgb(38 87 124 / 55%);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.number {
+  color: #26577c;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: -0.02em;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 38px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 40px;
+    line-height: 42px;
+  }
+}
+
+.documentTitle {
+  color: #0b0b0b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 10px;
+  color: #ea5455;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.arrow {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid #ea5455;
+  border-radius: 50%;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.cardLink {
+  transition: border-color 0.2s;
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: #ea5455;
+    }
+
+    &:hover .arrow {
+      background: #ea5455;
+      color: #fff;
+    }
+  }
+}

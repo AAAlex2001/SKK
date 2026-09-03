@@ -1,0 +1,260 @@
+.root {
+  width: 100%;
+  background: #fff;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 50px 20px;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    gap: 40px;
+    padding: 50px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+    gap: 50px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    max-width: 700px;
+  }
+}
+
+.title {
+  color: #26577c;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  text-transform: uppercase;
+}
+
+.rule {
+  flex: none;
+  width: 150px;
+  height: 3px;
+  background: #ea5455;
+}
+
+.lead {
+  color: #26577c;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 280px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #f7f4ed;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    min-height: 300px;
+  }
+
+  @media (min-width: 1440px) {
+    min-height: 320px;
+    padding: 30px;
+  }
+
+  @media (hover: hover) {
+    &:hover .media {
+      transform: scale(1.06);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &:hover .media {
+      transform: none;
+    }
+  }
+}
+
+.media {
+  z-index: 0;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.mediaUnderground {
+  object-position: 62% center;
+}
+
+.mediaOpenPit {
+  object-position: 65% 70%;
+}
+
+.mediaProcessing {
+  object-position: 68% 60%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgb(255 255 255 / 94%) 0%,
+    rgb(255 255 255 / 88%) 55%,
+    rgb(255 255 255 / 62%) 100%
+  );
+
+  @media (min-width: 768px) {
+    background: linear-gradient(
+      90deg,
+      rgb(255 255 255 / 93%) 0%,
+      rgb(255 255 255 / 84%) 45%,
+      rgb(255 255 255 / 0%) 78%
+    );
+  }
+
+  @media (min-width: 1440px) {
+    background: linear-gradient(
+      90deg,
+      rgb(255 255 255 / 92%) 0%,
+      rgb(255 255 255 / 82%) 34%,
+      rgb(255 255 255 / 0%) 62%
+    );
+  }
+}
+
+.overlayDimmed {
+  background: linear-gradient(
+    90deg,
+    rgb(255 255 255 / 96%) 0%,
+    rgb(255 255 255 / 92%) 55%,
+    rgb(255 255 255 / 74%) 100%
+  );
+
+  @media (min-width: 768px) {
+    background: linear-gradient(
+      90deg,
+      rgb(255 255 255 / 95%) 0%,
+      rgb(255 255 255 / 90%) 50%,
+      rgb(255 255 255 / 25%) 78%,
+      rgb(255 255 255 / 0%) 95%
+    );
+  }
+
+  @media (min-width: 1440px) {
+    background: linear-gradient(
+      90deg,
+      rgb(255 255 255 / 94%) 0%,
+      rgb(255 255 255 / 88%) 34%,
+      rgb(255 255 255 / 10%) 60%,
+      rgb(255 255 255 / 0%) 80%
+    );
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+
+  @media (min-width: 768px) {
+    width: 380px;
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 440px;
+  }
+}
+
+.subtitle {
+  color: #ea5455;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  color: #26577c;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+    line-height: 34px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 40px;
+    line-height: 42px;
+  }
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  list-style: none;
+}
+
+.itemRow {
+  display: flex;
+  gap: 10px;
+  color: #0b0b0b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+
+  &::before {
+    content: "";
+    flex: none;
+    width: 6px;
+    height: 6px;
+    margin-top: 7px;
+    border-radius: 50%;
+    background: #ea5455;
+  }
+}

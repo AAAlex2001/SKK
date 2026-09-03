@@ -1,0 +1,136 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.viewport {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: calc(100% + 100px);
+    margin-inline: -50px;
+  }
+}
+
+.track {
+  width: 100%;
+}
+
+.shade {
+  display: none;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    width: 50px;
+    background: linear-gradient(90deg, #fff, rgb(255 255 255 / 0%));
+    pointer-events: none;
+  }
+}
+
+.shadeLeft {
+  left: 0;
+}
+
+.shadeRight {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.step {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 260px;
+  max-width: 260px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #f7f4ed;
+
+  @media (min-width: 768px) {
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  @media (min-width: 1440px) {
+    min-width: 320px;
+    max-width: 320px;
+  }
+}
+
+.number {
+  color: #ea5455;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+
+  @media (min-width: 1440px) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.stepTitle {
+  color: #26577c;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.description {
+  color: #0b0b0b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.duration {
+  margin-top: auto;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #fff;
+  color: #26577c;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #26577c;
+  border-radius: 50%;
+  background: #fff;
+  color: #26577c;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+
+  @media (hover: hover) {
+    &:hover {
+      background: #26577c;
+      color: #fff;
+    }
+  }
+}
+
+.buttonPrev svg {
+  transform: scaleX(-1);
+}

@@ -1,0 +1,159 @@
+.root {
+  width: 100%;
+  background: #fff;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 60px 20px;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    gap: 50px;
+    padding: 80px 50px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+    gap: 60px;
+    padding: 100px 50px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    max-width: 700px;
+  }
+}
+
+.title {
+  color: #26577c;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  text-transform: uppercase;
+}
+
+.rule {
+  flex: none;
+  width: 150px;
+  height: 3px;
+  background: #ea5455;
+}
+
+.lead {
+  color: #26577c;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    gap: 50px;
+  }
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 70px;
+  }
+}
+
+.photo {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 50px;
+
+  @media (min-width: 768px) {
+    height: 320px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 45%;
+    height: auto;
+    aspect-ratio: 11 / 10;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 120px) 100%, 0 100%);
+  }
+}
+
+.photoImage {
+  object-fit: cover;
+  object-position: 55% 65%;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+  width: 100%;
+  list-style: none;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    flex: 1;
+    min-width: 0;
+    gap: 55px 60px;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.number {
+  color: #26577c;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+
+  @media (min-width: 768px) {
+    font-size: 52px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 64px;
+  }
+}
+
+.itemTitle {
+  color: #26577c;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.description {
+  color: #0b0b0b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}

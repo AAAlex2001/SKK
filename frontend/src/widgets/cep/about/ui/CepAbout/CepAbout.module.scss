@@ -1,0 +1,135 @@
+.root {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  @media (min-width: 768px) {
+    left: calc(50% + 60px);
+    clip-path: polygon(65% 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  @media (min-width: 1440px) {
+    left: calc(50% - 60px);
+    clip-path: polygon(45% 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.photo {
+  object-fit: cover;
+  object-position: 62% center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgb(255 255 255 / 82%);
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-inline: auto;
+  padding: 100px 20px;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    padding: 100px 50px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+    padding: 150px 50px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 550px;
+
+  @media (min-width: 768px) {
+    max-width: 360px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 520px;
+    gap: 50px;
+  }
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.title {
+  color: #26577c;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  text-transform: uppercase;
+}
+
+.rule {
+  flex: none;
+  width: 150px;
+  height: 3px;
+  background: #ea5455;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+
+  @media (min-width: 1440px) {
+    gap: 24px;
+  }
+}
+
+.lead {
+  color: #0b0b0b;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+
+  @media (min-width: 1440px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.paragraph {
+  color: #0b0b0b;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+
+  @media (min-width: 1440px) {
+    line-height: 26px;
+  }
+}
+
+.accent {
+  color: #26577c;
+  font-weight: 700;
+}

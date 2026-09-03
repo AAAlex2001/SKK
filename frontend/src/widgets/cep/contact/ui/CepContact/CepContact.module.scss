@@ -1,0 +1,132 @@
+.root {
+  background: #fff;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 30px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 50px 20px;
+  border-radius: 50px;
+  background: #26577c;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    padding: 50px;
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: 1fr minmax(360px, 420px);
+    align-items: center;
+    gap: 50px;
+    max-width: 1440px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.kicker {
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: rgb(255 255 255 / 12%);
+  color: #ebe4d1;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 44px;
+    line-height: 48px;
+  }
+}
+
+.rule {
+  flex: none;
+  width: 150px;
+  height: 3px;
+  background: #ea5455;
+}
+
+.lead {
+  max-width: 560px;
+  color: rgb(255 255 255 / 85%);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  background: #fff;
+
+  @media (min-width: 768px) {
+    padding: 30px;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f2f2f7;
+}
+
+.contactLabel {
+  color: rgb(38 87 124 / 55%);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contactValue {
+  color: #26577c;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  transition: color 0.2s;
+
+  @media (min-width: 1440px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+@media (hover: hover) {
+  .contact:hover .contactValue {
+    color: #ea5455;
+  }
+}
+
+.cta {
+  width: 100%;
+}

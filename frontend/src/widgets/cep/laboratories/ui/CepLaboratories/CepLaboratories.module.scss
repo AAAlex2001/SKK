@@ -1,0 +1,150 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  padding-block: 50px;
+  border-radius: 50px;
+  background: #ebe4d1;
+
+  @media (min-width: 768px) {
+    gap: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 50px;
+  }
+}
+
+.inner,
+.footer {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 20px;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    padding-inline: 50px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 50px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    max-width: 700px;
+  }
+
+  @media (min-width: 1440px) {
+    flex: 1;
+    min-width: 0;
+    max-width: none;
+  }
+}
+
+.title {
+  color: #26577c;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  text-transform: uppercase;
+}
+
+.rule {
+  flex: none;
+  width: 150px;
+  height: 3px;
+  background: #ea5455;
+}
+
+.lead {
+  max-width: 520px;
+  color: #26577c;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.media {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    height: 260px;
+  }
+
+  @media (min-width: 1440px) {
+    flex: none;
+    width: 620px;
+    height: 300px;
+  }
+}
+
+.mediaImage {
+  object-fit: cover;
+  object-position: 18% 62%;
+}
+
+.count {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  background: rgb(38 87 124 / 92%);
+}
+
+.countValue {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.03em;
+}
+
+.countLabel {
+  color: #ebe4d1;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.note {
+  color: rgb(11 11 11 / 60%);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+
+  @media (min-width: 768px) {
+    max-width: 700px;
+  }
+}
