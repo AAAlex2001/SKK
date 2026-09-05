@@ -5,7 +5,7 @@ import styles from "./CepLegal.module.scss";
 const KIND: Record<string, string> = {
   "116-fz": "Федеральный закон",
   "117-fz": "Федеральный закон",
-  "order-503": "Приказ Ростехнадзора",
+  "order-503": "Приказ Ростехнадзора от 08.12.2020",
   "skk-regulation": "Внутренний документ",
 };
 
@@ -31,14 +31,15 @@ export function CepLegal() {
       aria-labelledby="cep-legal-title"
     >
       <div className={styles.inner}>
-        <div className={styles.header}>
-          <h2 id="cep-legal-title" className={styles.title}>
-            Нормативная основа
-          </h2>
-          <span className={styles.rule} />
-        </div>
+        <div className={styles.panel}>
+          <div className={styles.header}>
+            <h2 id="cep-legal-title" className={styles.title}>
+              Нормативная основа
+            </h2>
+            <span className={styles.rule} />
+          </div>
 
-        <ul className={styles.list}>
+          <ul className={styles.list}>
             {CEP_LEGAL_DOCUMENTS.map((doc) => {
               const content = (
                 <>
@@ -74,7 +75,8 @@ export function CepLegal() {
                 </li>
               );
             })}
-        </ul>
+          </ul>
+        </div>
       </div>
     </section>
   );

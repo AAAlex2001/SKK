@@ -16,38 +16,39 @@ export function CepLaboratories() {
       aria-labelledby="cep-laboratories-title"
     >
       <div className={styles.inner}>
-        <div className={styles.header}>
-          <h2 id="cep-laboratories-title" className={styles.title}>
-            Профильные лаборатории
-          </h2>
-          <span className={styles.rule} />
-          <p className={styles.lead}>
-            Подключаются по необходимости — состав исследований определяется
-            обстоятельствами аварии.
-          </p>
-        </div>
+        <div className={styles.head}>
+          <div className={styles.header}>
+            <h2 id="cep-laboratories-title" className={styles.title}>
+              Профильные лаборатории
+            </h2>
+            <span className={styles.rule} />
+            <p className={styles.lead}>
+              Состав привлекаемых специализированных профильных лабораторий по
+              областям. Подключаются по распоряжению руководителя экспертной
+              группы — в необходимом количестве и направленности.
+            </p>
+          </div>
 
-        <div className={styles.media}>
-          <Image
-            className={styles.mediaImage}
-            src="/cep/laboratory.webp"
-            alt="Испытательные стенды и разрывные машины в лаборатории"
-            fill
-            sizes="(min-width: 1440px) 620px, (min-width: 768px) 668px, 100vw"
-          />
+          <div className={styles.media}>
+            <Image
+              className={styles.mediaImage}
+              src="/cep/laboratory.webp"
+              alt="Испытательные стенды и разрывные машины в лаборатории"
+              fill
+              sizes="(min-width: 1440px) 620px, (min-width: 768px) 668px, 100vw"
+            />
 
-          <span className={styles.count}>
-            <span className={styles.countValue}>12</span>
-            <span className={styles.countLabel}>направлений</span>
-          </span>
+            <span className={styles.count}>
+              <span className={styles.countValue}>28</span>
+              <span className={styles.countLabel}>лабораторий</span>
+            </span>
+          </div>
         </div>
       </div>
 
-      <LaboratoriesMarquee
-        items={CEP_LABORATORIES.map((laboratory) => laboratory.title)}
-      />
+      <LaboratoriesMarquee items={CEP_LABORATORIES} />
 
-      <div className={styles.footer}>
+      <div className={styles.inner}>
         <p className={styles.note}>{CEP_LABORATORIES_NOTE}</p>
       </div>
     </section>

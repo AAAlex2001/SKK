@@ -3,9 +3,10 @@
   flex-direction: column;
   gap: 30px;
   width: 100%;
-  padding-block: 50px;
+  padding-block: var(--section-y);
   border-radius: 50px;
   background: #ebe4d1;
+  overflow: hidden;
 
   @media (min-width: 768px) {
     gap: 40px;
@@ -16,8 +17,7 @@
   }
 }
 
-.inner,
-.footer {
+.inner {
   width: 100%;
   margin-inline: auto;
   padding-inline: 20px;
@@ -32,7 +32,7 @@
   }
 }
 
-.inner {
+.head {
   display: flex;
   flex-direction: column;
   gap: 30px;

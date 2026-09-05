@@ -3,26 +3,40 @@
 }
 
 .inner {
+  width: 100%;
+  margin-inline: auto;
+  padding: var(--section-y) 20px;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    padding: var(--section-y) 50px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+  }
+}
+
+.panel {
   display: grid;
   grid-template-columns: 1fr;
   align-items: start;
   gap: 30px;
   width: 100%;
-  margin-inline: auto;
-  padding: 50px 20px;
+  padding: 30px 20px;
   border-radius: 50px;
   background: #26577c;
 
   @media (min-width: 768px) {
-    max-width: 768px;
-    padding: 50px;
+    gap: 40px;
+    padding: 40px 30px;
   }
 
   @media (min-width: 1440px) {
     grid-template-columns: 1fr minmax(360px, 420px);
     align-items: center;
     gap: 50px;
-    max-width: 1440px;
+    padding: 50px 40px;
   }
 }
 

@@ -7,7 +7,7 @@
 
 .media {
   position: absolute;
-  inset: 0;
+  inset: var(--section-y) 0;
   z-index: 0;
 
   @media (min-width: 768px) {
@@ -28,7 +28,7 @@
 
 .overlay {
   position: absolute;
-  inset: 0;
+  inset: var(--section-y) 0;
   z-index: 1;
   background: rgb(255 255 255 / 82%);
 
@@ -42,16 +42,15 @@
   z-index: 2;
   width: 100%;
   margin-inline: auto;
-  padding: 100px 20px;
+  padding: calc(var(--section-y) + 40px) 20px;
 
   @media (min-width: 768px) {
     max-width: 768px;
-    padding: 100px 50px;
+    padding: var(--section-y) 50px;
   }
 
   @media (min-width: 1440px) {
     max-width: 1440px;
-    padding: 150px 50px;
   }
 }
 

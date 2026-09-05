@@ -11,18 +11,20 @@ export function CepAccidents() {
       aria-labelledby="cep-accidents-title"
     >
       <div className={styles.inner}>
-        <div className={styles.header}>
-          <h2 id="cep-accidents-title" className={styles.title}>
-            Виды происшествий
-          </h2>
-          <span className={styles.rule} />
-          <p className={styles.lead}>
-            Выберите профиль объекта — перечень показывает типовые сценарии, под
-            которые формируется состав экспертной группы
-          </p>
-        </div>
+        <div className={styles.panel}>
+          <div className={styles.header}>
+            <h2 id="cep-accidents-title" className={styles.title}>
+              Виды происшествий
+            </h2>
+            <span className={styles.rule} />
+            <p className={styles.lead}>
+              Выберите профиль объекта — перечень показывает типовые сценарии,
+              под которые формируется состав экспертной группы
+            </p>
+          </div>
 
-        <AccidentExplorer groups={CEP_ACCIDENT_GROUPS} />
+          <AccidentExplorer groups={CEP_ACCIDENT_GROUPS} />
+        </div>
       </div>
     </section>
   );

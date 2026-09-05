@@ -45,8 +45,12 @@ export function CepDirections() {
           </h2>
           <span className={styles.rule} />
           <p className={styles.lead}>
-            Компетенции подбираются под конкретную аварию и профиль объекта —
-            группа экспертов формируется отдельно под каждое расследование.
+            ЦЭП ООО «СКК» укомплектован экспертами в области промышленной
+            безопасности различной направленности — геомеханика, вентиляция,
+            гидротехнические сооружения, инженерные изыскания, технические
+            устройства, здания и сооружения, пожарная безопасность —
+            аттестованными в Ростехнадзоре, а также специалистами с учёной
+            степенью кандидата и доктора технических наук.
           </p>
         </div>
 
@@ -73,6 +77,8 @@ export function CepDirections() {
                   <div className={styles.content}>
                     <p className={styles.subtitle}>{direction.subtitle}</p>
                     <h3 className={styles.cardTitle}>{direction.title}</h3>
+
+                    <p className={styles.subtitle}>Эксперты в части:</p>
 
                     <ul className={styles.items}>
                       {direction.items.map((item) => (

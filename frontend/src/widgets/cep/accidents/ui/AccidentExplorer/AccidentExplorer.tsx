@@ -83,13 +83,46 @@ export function AccidentExplorer({ groups }: AccidentExplorerProps) {
           <h3 className={styles.panelTitle}>{active.title}</h3>
         </div>
 
-        <ul className={styles.list}>
-          {active.items.map((item) => (
-            <li key={item} className={styles.item}>
-              {item}
+        <ol className={styles.list}>
+          {active.items.map((item, index) => (
+            <li key={item.title} className={styles.item}>
+              <h4 className={styles.itemTitle}>
+                <span className={styles.number}>
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                {item.title}
+              </h4>
+
+              <div className={styles.cols}>
+                <div className={styles.col}>
+                  <p className={styles.colLabel}>
+                    Привлекаемые эксперты в части
+                  </p>
+                  <ul className={styles.sub}>
+                    {item.experts.map((expert) => (
+                      <li key={expert} className={styles.subItem}>
+                        {expert}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className={styles.col}>
+                  <p className={styles.colLabel}>
+                    Профильные лаборатории в части
+                  </p>
+                  <ul className={styles.sub}>
+                    {item.labs.map((lab) => (
+                      <li key={lab} className={styles.subItem}>
+                        {lab}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </li>
           ))}
-        </ul>
+        </ol>
       </div>
     </div>
   );
