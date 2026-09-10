@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { COMPANY, SITE_URL, jsonLd } from "@/shared/config/site";
 import { CepAbout } from "@/widgets/cep/about";
 import { CepAccidents } from "@/widgets/cep/accidents";
+import { CepBreadcrumbs } from "@/widgets/cep/breadcrumbs";
 import { CepContact } from "@/widgets/cep/contact";
 import { CepDirections } from "@/widgets/cep/directions";
 import { CepHero } from "@/widgets/cep/hero";
@@ -109,6 +110,7 @@ export default function CepRoute() {
   return (
     <main>
       <CepHero />
+      <CepBreadcrumbs />
       <CepDirections />
       <CepLegal />
       <CepAbout />

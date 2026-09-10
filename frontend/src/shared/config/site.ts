@@ -55,9 +55,11 @@ export const organizationSchema = {
   url: `${SITE_URL}/`,
   logo: {
     "@type": "ImageObject",
-    url: `${SITE_URL}/icon.svg`,
+    url: `${SITE_URL}/logo.png`,
+    width: 200,
+    height: 200,
   },
-  image: `${SITE_URL}/opengraph-image`,
+  image: `${SITE_URL}/opengraph-image.jpg`,
   email: COMPANY.email,
   telephone: COMPANY.phone,
   foundingDate: COMPANY.foundingDate,
@@ -69,6 +71,7 @@ export const organizationSchema = {
     { "@type": "PropertyValue", name: "КПП", value: COMPANY.kpp },
     { "@type": "PropertyValue", name: "ОГРН", value: COMPANY.ogrn },
     { "@type": "PropertyValue", name: "ОКПО", value: COMPANY.okpo },
+    { "@type": "PropertyValue", name: "ОКВЭД", value: COMPANY.okved },
   ],
   employee: {
     "@type": "Person",
@@ -88,7 +91,6 @@ export const organizationSchema = {
     { "@type": "Country", name: "Россия" },
   ],
   knowsAbout: [...SERVICES],
-  naics: COMPANY.okved,
 };
 
 export const websiteSchema = {
